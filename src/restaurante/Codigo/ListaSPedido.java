@@ -11,7 +11,7 @@ package restaurante.Codigo;
  */
 public class ListaSPedido {
     NodoPedido p;
-    	ListaSPedido() {
+    	public ListaSPedido() {
 		p = null;
 	}
 	public NodoPedido getP() {

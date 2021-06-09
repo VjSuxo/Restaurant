@@ -11,12 +11,12 @@ package restaurante.Codigo;
  */
 public class ColaAlimento {
       int max;
-    PilaAlimento[] c;
+    Alimento[] c;
     int frente,fin;
 
     public ColaAlimento(int max) {
         this.max = max;
-        c = new PilaAlimento[max];
+        c = new Alimento[max];
         this.frente = -1;
         this.fin = -1;
     }
@@ -44,7 +44,7 @@ public class ColaAlimento {
             return false;
     }
     
-    public void adicola(PilaAlimento dato){
+    public void adicola(Alimento dato){
         if(esLlena())
             System.out.println("Cola Llena");
         else {
@@ -54,8 +54,8 @@ public class ColaAlimento {
                 frente=0;
         }
     }
-    public PilaAlimento elicola(){
-        PilaAlimento dato= new PilaAlimento();
+    public Alimento elicola(){
+        Alimento dato= new Alimento();
         if(esVacia())
             System.out.println("Cola Vacia");
         else
@@ -71,7 +71,7 @@ public class ColaAlimento {
         return dato;
     }
     public void mostrarCola(){
-        PilaAlimento dato;
+        Alimento dato;
         ColaAlimento caux=new ColaAlimento(max);
         System.out.println("Los datos de la cola son:");
         while(!esVacia()){

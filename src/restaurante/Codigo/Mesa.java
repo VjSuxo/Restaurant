@@ -19,8 +19,7 @@ public class Mesa {
     public Mesa() {
     }
 
-    public Mesa(ListaSPedido Pedido, boolean Estado, int CantidadPersonas, Factura Factura,int id) {
-        this.Pedido = Pedido;
+    public Mesa(boolean Estado, int CantidadPersonas,int id) {
         this.Estado = Estado;
         this.CantidadPersonas = CantidadPersonas;
         this.Factura = Factura;

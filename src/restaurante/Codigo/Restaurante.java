@@ -10,25 +10,16 @@ package restaurante.Codigo;
  * @author Tostadora
  */
 public class Restaurante {
-    ListaSMesero LMesero;
     ColaAlimento CAlimento;
     ColaMesa CMesa;
 
     public Restaurante() {
     }
 
-    public Restaurante(ListaSMesero LMesero, ColaAlimento CAlimento, ColaMesa CMesa) {
-        this.LMesero = LMesero;
+    public Restaurante( ColaAlimento CAlimento, ColaMesa CMesa) {
+        
         this.CAlimento = CAlimento;
         this.CMesa = CMesa;
-    }
-
-    public ListaSMesero getLMesero() {
-        return LMesero;
-    }
-
-    public void setLMesero(ListaSMesero LMesero) {
-        this.LMesero = LMesero;
     }
 
     public ColaAlimento getCAlimento() {

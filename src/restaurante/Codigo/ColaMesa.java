@@ -38,6 +38,19 @@ public class ColaMesa {
             return false;
     }
     
+    public void llenar(int dato,int cant){
+        
+        if(cant<max){
+        
+            for (int i = 0; i < cant; i++) {
+                Mesa mes = new Mesa(true, dato, i);
+                c[i] = mes;
+            }
+            
+        }
+    
+    }
+    
     public void adicola(Mesa dato){
         if(esLlena())
             System.out.println("Cola Llena");

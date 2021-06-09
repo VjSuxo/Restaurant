@@ -15,15 +15,28 @@ public class Alimento {
     private double precio;
     private String nombre;
     private int id;
+    private int cant;
 
     public Alimento() {
     }
 
-    public Alimento(String tipo, double precio, String nombre, int id) {
+    public Alimento(String tipo, double precio, String nombre, int id,int cantidad) {
         this.tipo = tipo;
         this.precio = precio;
         this.nombre = nombre;
         this.id = id;
+    }
+
+    public void getCant() {
+        cant--;
+    }
+
+    public int getTotal() {
+        return cant;
+    }
+    
+    public void setCant(int cant) {
+        this.cant += cant;
     }
 
     public String getTipo() {
