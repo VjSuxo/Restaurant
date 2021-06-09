@@ -71,7 +71,7 @@ public class Metodos {
     public ColaMesa generarMesas(){
     
         ColaMesa colaMesa = new ColaMesa();
-        
+        colaMesa.adicola(dato);
         return colaMesa;
         
     }
