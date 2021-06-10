@@ -10,8 +10,8 @@ package restaurante.Codigo;
  * @author Tostadora
  */
 public class ColaAlimento {
-      int max;
-    Alimento[] c;
+      int max = 100;
+    Alimento[] c = new Alimento[max];
     int frente,fin;
 
     public ColaAlimento(int max) {

@@ -17,16 +17,18 @@ public class Metodos {
     
         ColaAlimento colaAlimento = new ColaAlimento();
         ColaMesa colaMesa = new ColaMesa();
+        colaAlimento = generarAlimentos();
+        colaMesa = generarMesas();
         
-         Restaurante res = new Restaurante();
-        
+        Restaurante res = new Restaurante(colaAlimento, colaMesa);
+         
         return res;
     }
     
     //Generar datos base
     
     public ColaAlimento generarAlimentos(){
-    
+        System.out.println("alimentos");
         ColaAlimento colaAlimento = new ColaAlimento();
         
         //Hambuerguesa
@@ -46,7 +48,7 @@ public class Metodos {
         colaAlimento.adicola(alimento);
         
         //Arroz Chaufa
-        alimento = new Alimento("plato", 17,"Pollo Frito", 5,12);
+        alimento = new Alimento("plato", 17,"Silpancho", 5,12);
         colaAlimento.adicola(alimento);
         
         //Helado
@@ -58,10 +60,14 @@ public class Metodos {
     }
     
     public ColaMesa generarMesas(){
-    
+        System.out.println("mesa");
         ColaMesa colaMesa = new ColaMesa();
+        for (int i = 0; i < 10; i++) {
+            Mesa mes = new Mesa(true, 4, i);
+            colaMesa.adicola(mes);
+            
+        }
         
-        colaMesa.llenar(4,10);
         
         return colaMesa;
         

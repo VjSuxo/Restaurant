@@ -38,24 +38,13 @@ public class ColaMesa {
             return false;
     }
     
-    public void llenar(int dato,int cant){
-        
-        if(cant<max){
-        
-            for (int i = 0; i < cant; i++) {
-                Mesa mes = new Mesa(true, dato, i);
-                c[i] = mes;
-            }
-            
-        }
-    
-    }
+
     
     public void adicola(Mesa dato){
         if(esLlena())
             System.out.println("Cola Llena");
         else {
-            fin=fin+1;
+            fin++;
             c[fin]=dato;
             if(fin==0)
                 frente=0;
@@ -83,15 +72,24 @@ public class ColaMesa {
         System.out.println("Los datos de la cola son:");
         while(!esVacia()){
             dato=elicola();
+            System.out.println(" "+dato.getId());
             caux.adicola(dato);
-            System.out.println(" "+dato);
+            
         }
+         System.out.println("datos "+frente+" "+fin);
         vaciarCola(caux);
     }
+    
     public void vaciarCola(ColaMesa aux){
-        while(!aux.esVacia())
-            adicola(aux.elicola());
-    }
-   
- 
+         System.out.println("datos "+aux.frente+" "+aux.fin);
+        System.out.println("vaciado");
+        
+        while(!aux.esVacia()){
+            Mesa mes = aux.elicola();
+            adicola(mes);
+            
+        }   
+       
+        System.out.println("datos "+frente+" "+fin);
+    }    
 }

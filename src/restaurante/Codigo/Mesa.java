@@ -23,6 +23,7 @@ public class Mesa {
         this.Estado = Estado;
         this.CantidadPersonas = CantidadPersonas;
         this.Factura = Factura;
+        this.id = id;
     }
 
     public int getId() {
