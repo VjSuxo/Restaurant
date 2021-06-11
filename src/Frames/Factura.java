@@ -405,15 +405,44 @@ public class Factura extends javax.swing.JFrame {
         
     }//GEN-LAST:event_productoActionPerformed
 
+    private void vaciar(){
+       String [] info = new String[4];
+        int filas = tabla.getRowCount();
+        for (int i = 0; i < filas-1; i++) {
+        
+               modelo.removeRow(i);
+        }
+         subtotal.setText("0");
+         total.setText("0");
+    tabla.setModel(modelo);
+    }
+    int x=0;
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String [] info = new String[4];
+           ColaMesa clm = new  ColaMesa();
+        String n = (String)nro.getSelectedItem();
+        System.out.println(n);
+        int x = Integer.parseInt(n);
+        Mesa mesa = new Mesa();
+        ListaSPedido lp = new ListaSPedido();
+        while(!colaMesa.esVacia()){
             
-        Mesa mesa = colaMesa.elicola();
+            mesa= colaMesa.elicola();
+            if(mesa.getId()==x){
+                mesa.getPedido().mostrar();
+                 lp= mesa.getPedido();
+            }
+            clm.adicola(mesa);
         
-        mesa.getPedido().mostrar();
+        }
+            colaMesa.vaciarCola(clm);
+            vaciar();
+            
+       
         
-        ListaSPedido lp = mesa.getPedido();
+       
         lp.mostrar();
         NodoPedido p = lp.getP();
         while(p !=null){
