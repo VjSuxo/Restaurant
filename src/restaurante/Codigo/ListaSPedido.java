@@ -10,7 +10,7 @@ package restaurante.Codigo;
  * @author Tostadora
  */
 public class ListaSPedido {
-    NodoPedido p;
+    NodoPedido p=null;
     	public ListaSPedido() {
 		p = null;
 	}

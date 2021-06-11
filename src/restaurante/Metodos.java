@@ -47,15 +47,39 @@ public class Metodos {
         alimento = new Alimento("extra", 9,"Papa Frita", 4,10);
         colaAlimento.adicola(alimento);
         
+        alimento = new Alimento("extra", 9,"Arroz frito", 4,10);
+        colaAlimento.adicola(alimento);
+        
+        
         //Arroz Chaufa
         alimento = new Alimento("plato", 17,"Silpancho", 5,12);
         colaAlimento.adicola(alimento);
         
         //Helado
-        alimento = new Alimento("extra", 12,"helado", 6,13);
+        alimento = new Alimento("postre", 12,"helado", 6,13);
+        colaAlimento.adicola(alimento);
+        
+        alimento = new Alimento("postre", 12,"mofin", 6,13);
+        colaAlimento.adicola(alimento);
+        
+        alimento = new Alimento("postre", 12,"pie manzana", 6,13);
+        colaAlimento.adicola(alimento);
+        
+        alimento = new Alimento("postre", 12,"pie limon", 6,13);
         colaAlimento.adicola(alimento);
         
         
+        alimento = new Alimento("bebida", 12,"cafe", 6,13);
+        colaAlimento.adicola(alimento);
+        
+        alimento = new Alimento("bebida", 12,"te", 6,13);
+        colaAlimento.adicola(alimento);
+        
+        alimento = new Alimento("bebida", 12,"limonada", 6,13);
+        colaAlimento.adicola(alimento);
+        
+        alimento = new Alimento("bebida", 12,"cerbeza", 6,13);
+        colaAlimento.adicola(alimento);
         return colaAlimento;
     }
     

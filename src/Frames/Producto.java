@@ -65,6 +65,7 @@ public class Producto extends javax.swing.JFrame {
     public void Base(Restaurante res, String text,int m){
         this.res = res;
         this.tipo = text;
+        this.m = m;
         System.out.println("Generando Base");
         cl = res.getCAlimento();
         cm = res.getCMesa(); 
@@ -81,12 +82,12 @@ public class Producto extends javax.swing.JFrame {
         while(!cl.esVacia()){  
             Alimento al = cl.elicola();
             
-            if(al.getTipo().toLowerCase().equals("plato"))
-            {
+           
+            
                 v[0] = al.getNombre();
                 v[1] = String.valueOf(al.getPrecio());
                 modelo.addRow(v);
-            }
+            
             aux.adicola(al);
                        
         }
@@ -185,25 +186,23 @@ public class Producto extends javax.swing.JFrame {
         while(!cl.esVacia()){
             Alimento a = cl.elicola();
             if(a.getNombre().equals(nombre)){
-               System.out.println(nombre);
+            
                ls.adifinal(a);
                a.getCant();
             }
-            System.out.println("*************");
-                  System.out.println(a.getId());
-            System.out.println("*************");
+         
             aux.adicola(a);
         }
         
-        System.out.println("a - a");
+  
         cl.vaciarCola(aux);
-        System.out.println("  -  ");
+       
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+     
         Pedido ped = new Pedido();
         ColaMesa aux = new ColaMesa();
         System.out.println("*-*-*");
@@ -212,23 +211,19 @@ public class Producto extends javax.swing.JFrame {
         while(!cm.esVacia()){
         
             Mesa mes = cm.elicola();
-            System.out.println(m);
             if(mes.getId()==m){
-                
-                System.out.println(m);
+                System.out.println("- aqui se añade el pedido al di "+m);
+                ls.mostrar();
                 mes.setPedido(ls);
-            
             }
-            System.out.println(mes.getId());
             aux.adicola(mes);
-            
         }
         
         cm.vaciarCola(aux);
         res.setCMesa(cm);
-        res.getCMesa().mostrarCola();
         ped.Base(res);
         ped.Cargar(ls);
+      
         ped.show();
         this.dispose();
         

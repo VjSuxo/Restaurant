@@ -75,8 +75,6 @@ public class Pedido extends javax.swing.JFrame {
         System.out.println("Vaciando La cola mesa auxiliar");
         colaMesa.vaciarCola(auxM);
         System.out.println("-------------------");
-        colaMesa.mostrarCola();
-        System.out.println("------------------");
         
     }
     
@@ -107,6 +105,24 @@ public class Pedido extends javax.swing.JFrame {
         }        
     }
     
+    public void ver(){
+    
+        colaMesa = res.getCMesa();
+        System.out.println("--------------------------");
+        while(!colaMesa.esVacia()){
+            Mesa m = colaMesa.elicola();
+            System.out.println("*************************************");
+            System.out.println("Id "+ m.getId());
+            if(m.getPedido().getP()!=null){
+                m.getPedido().mostrar();
+            }
+            System.out.println("");
+            System.out.println("**************************************");
+        }
+        System.out.println("-----------------------------");
+        
+    
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -121,9 +137,6 @@ public class Pedido extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         mesa = new javax.swing.JComboBox<>();
 
@@ -150,12 +163,6 @@ public class Pedido extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        jButton2.setText("Extra");
-
-        jButton3.setText("Postre");
-
-        jButton4.setText("Bebida");
 
         jButton5.setText("Realizar Pedido");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -185,15 +192,9 @@ public class Pedido extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(87, 87, 87)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(243, 243, 243)
                         .addComponent(jButton5)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -209,10 +210,7 @@ public class Pedido extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton2))
+                    .addComponent(jButton5))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -243,8 +241,9 @@ public class Pedido extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-       colaMesa.mostrarCola();
-        
+        colaMesa = res.getCMesa();
+    // ver();
+        System.out.println("-----------------------------");
         Factura fac = new Factura();
         fac.setColaAlimento(colaAlimento);
         fac.setColaMesa(colaMesa);
@@ -290,9 +289,6 @@ public class Pedido extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
