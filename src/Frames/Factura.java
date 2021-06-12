@@ -475,9 +475,9 @@ public class Factura extends javax.swing.JFrame {
             System.out.println("-2");
             subtotal.setText(String.valueOf(y));
             System.out.println("-3");
-            igv.setText("0.13");
+            igv.setText("1");
             System.out.println("-4");
-            double z = Double.parseDouble(subtotal.getText())+ 0.13+Double.parseDouble(total.getText());
+            double z = Double.parseDouble(subtotal.getText())+ 1+Double.parseDouble(total.getText());
             System.out.println("-5");
             total.setText(String.valueOf(z));
             System.out.println("-6");
