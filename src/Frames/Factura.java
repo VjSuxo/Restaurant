@@ -156,7 +156,6 @@ public class Factura extends javax.swing.JFrame {
             }
         });
 
-        producto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "POSHO 1", "POSHO2", "POSHO3", "POSHO4", "YO" }));
         producto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productoActionPerformed(evt);
@@ -200,7 +199,6 @@ public class Factura extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton1)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnagregar)
@@ -382,8 +380,8 @@ public class Factura extends javax.swing.JFrame {
         info[3]= String.valueOf(x);
         double y = Double.parseDouble(subtotal.getText())+x;
         subtotal.setText(String.valueOf(y));
-        igv.setText("36.0");
-        double z = Double.parseDouble(subtotal.getText())+ 36.0+Double.parseDouble(total.getText());
+        igv.setText("0.13");
+        double z = Double.parseDouble(subtotal.getText())+ 0.13+Double.parseDouble(total.getText());
         total.setText(String.valueOf(z));
         modelo.addRow(info);
         
@@ -460,9 +458,9 @@ public class Factura extends javax.swing.JFrame {
             System.out.println("-2");
             subtotal.setText(String.valueOf(y));
             System.out.println("-3");
-            igv.setText("36.0");
+            igv.setText("0.13");
             System.out.println("-4");
-            double z = Double.parseDouble(subtotal.getText())+ 36.0+Double.parseDouble(total.getText());
+            double z = Double.parseDouble(subtotal.getText())+ 0.13+Double.parseDouble(total.getText());
             System.out.println("-5");
             total.setText(String.valueOf(z));
             System.out.println("-6");

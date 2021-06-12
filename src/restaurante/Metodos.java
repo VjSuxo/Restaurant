@@ -78,7 +78,7 @@ public class Metodos {
         alimento = new Alimento("bebida", 12,"limonada", 6,13);
         colaAlimento.adicola(alimento);
         
-        alimento = new Alimento("bebida", 12,"cerbeza", 6,13);
+        alimento = new Alimento("bebida", 12,"cerveza", 6,13);
         colaAlimento.adicola(alimento);
         return colaAlimento;
     }
