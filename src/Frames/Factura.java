@@ -323,6 +323,7 @@ public class Factura extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("\n  Hamburguesa  --->  25.5\n  Pollo Frito          --->  17.0\n  Charque            --->  10.0\n  Papa Frita         --->  9.0\n  Arroz Frito          --->  9.0\n  Silpancho          --->  17.0\n  Helado               --->  12.0\n  Mofin                   --->  12.0\n  Pie Manzana     --->  12.0\n  Pie Limon          --->  12.0\n  Cafe                    --->  12.0\n  Te                        --->  12.0\n  Limonada          --->  12.0\n  Cerveza              --->  12.0\n\n  ");

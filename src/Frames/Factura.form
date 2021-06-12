@@ -523,6 +523,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="jTextArea1">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="&#xa;  Hamburguesa  ---&gt;  25.5&#xa;  Pollo Frito          ---&gt;  17.0&#xa;  Charque            ---&gt;  10.0&#xa;  Papa Frita         ---&gt;  9.0&#xa;  Arroz Frito          ---&gt;  9.0&#xa;  Silpancho          ---&gt;  17.0&#xa;  Helado               ---&gt;  12.0&#xa;  Mofin                   ---&gt;  12.0&#xa;  Pie Manzana     ---&gt;  12.0&#xa;  Pie Limon          ---&gt;  12.0&#xa;  Cafe                    ---&gt;  12.0&#xa;  Te                        ---&gt;  12.0&#xa;  Limonada          ---&gt;  12.0&#xa;  Cerveza              ---&gt;  12.0&#xa;&#xa;  "/>
