@@ -38,11 +38,6 @@ public class main {
         Pedido ped = new Pedido();
         ped.Base(res);
         ped.show();
-
-        
-     
-            
-
     }
     
 }
